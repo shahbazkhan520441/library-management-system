@@ -45,6 +45,11 @@ public class BorrowRecord {
 		   public boolean isOverdue() {
 		        return returnDate == null && LocalDate.now().isAfter(borrowDate.plusDays(30));
 		    }
+		@Override
+		public String toString() {
+			return "BorrowRecord [book=" + book + ", member=" + member + ", borrowDate=" + borrowDate + ", returnDate="
+					+ returnDate + "]";
+		}
 	    
 	    
 }

@@ -37,6 +37,10 @@ public class Member {
 	    public boolean canBorrow() {
 	        return borrowRecords.stream().filter(record -> record.getReturnDate() == null).count() < 5;
 	    }
+		@Override
+		public String toString() {
+			return "Member [memberId=" + memberId + ", name=" + name + ", borrowRecords=" + borrowRecords + "]";
+		}
 
 	
 	
